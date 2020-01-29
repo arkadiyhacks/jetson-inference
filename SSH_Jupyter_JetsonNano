@@ -1,0 +1,19 @@
+#Logging into the system 
+screen /dev/tty.usbmodem****
+
+#Checking the IP address 
+ifconfig 
+
+#Remotely accessing the Jetson Nano 
+ssh yourname@yourIP
+
+#Remote access through the bridge (use bridge’s IP)
+#On the local terminal window type 
+ssh -L 8000:localhost:8888 yourname@yourIP
+
+#On the Jetson Terminal login, do not ssh, but type 
+jupyter notebook
+
+#Done, now open the http://localhost:8000 in browser
+
+
